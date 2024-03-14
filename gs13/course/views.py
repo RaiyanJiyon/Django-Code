@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def learn_django(request):
-    course = "Django"
+    course = "Django For Everyone"
     duration = "four month"
     seat = False
     course_details = {'cu': course, 'du': duration, 'se': seat}
