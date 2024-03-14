@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Fees</title>
+    <style>
+        body {
+            background-color: black;
+            color: seashell;
+        }
+    </style>
+</head>
+<body>
+    <h1>Django Fees End Time</h1>
+    <h2>Last Date: {{dt}}</h2>
+    <!-- now lets add filters -->
+    <h2>Last Date: {{dt|date:'D d M Y'}}</h2>
+    <h2>Last Date: {{dt|time:'H:i'}}</h2>
+
+    <!-- predefines time format -->
+
+    <h2>Last Date: {{dt|date:'SHORT_DATE_FORMAT'}}</h2>
+    <h2>Last Date:{{dt|time:'TIME_FORMAT'}}</h2>
+</body>
+</html>
