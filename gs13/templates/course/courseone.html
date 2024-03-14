@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Course</title>
+    <style>
+        body {
+            background-color: black;
+            color: seashell;
+        }
+    </style>
+</head>
+<body>
+    <h2>Course Details - </h2>
+    <h3>Name: {{cu|upper}}</h3>
+    <h3>Duration: {{du|capfirst|length}}</h3>
+    <!-- in default filters -> no space requrired  -->
+    <h3>Seat: {{se|default:'Not Updated'}}</h3> 
+</body>
+</html>
