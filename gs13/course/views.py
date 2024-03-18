@@ -9,3 +9,6 @@ def learn_django(request):
     course_details = {'cu': course, 'du': duration, 'se': seat}
 
     return render(request, 'course/courseone.html', context=course_details)
+
+def float_format(request):
+    return render(request, "course/courseone.html", context={"p1": 56.234, "p2": 56.0000, "p3": 56.34567})
