@@ -23,3 +23,7 @@ def example_two(request):
 
     course_details = {'nm':name, 'st':seats}
     return render(request, "course/coursethree.html", context = course_details)
+
+def example_three(request):
+    students = {'names': ["Sabbir", "Tamim", "Ishaq", "Mahabub", "Sohel"]}
+    return render(request, "course/coursefour.html", context=students)

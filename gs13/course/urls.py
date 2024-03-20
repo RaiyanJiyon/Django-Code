@@ -6,4 +6,5 @@ urlpatterns = [
     path('floatdj/', views.float_format),
     path('tagsdj/', views.django_tag),
     path('exmp2/', views.example_two),
+    path('exmp3/', views.example_three),
 ]
