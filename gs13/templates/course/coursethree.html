@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Course</title>
+    <style>
+        body {
+            background-color: black;
+            color: seashell;
+        }
+    </style>
+</head>
+<body>
+
+    {% comment %} if tags  {% endcomment %}
+    {% if nm %}
+    <h2>For Course {{nm}} {{st}} Seat Available</h2>
+    {% endif %}
+    
+    {% if nm and st %}
+    <h2>For Course {{nm}} {{st}} Seat Available</h2>
+    {% endif %}
+    
+    {% if nm or st %}
+    <h2>Seat Available {{st}}</h2>
+    {% endif %}
+    
+    {% if not st %}
+    <h2>Seat are not Available</h2>
+    {% endif %}
+
+    {% comment %} if tags with condition {% endcomment %}
+
+    {% if nm == 'Django' %}
+    <p>Yeah {{nm}}</p>
+    {% endif %}
+    
+    {% if nm == 'Django' and st == 4 %}
+    <h1>{{nm}} Seat Available</h1>
+    {% endif %}
+    
+    {% if nm == 'Tangoo' %}
+    <p>Yeah {{nm}}</p>
+    {% else %}
+    <p>Name is {{nm}}</p>
+    {% endif %}
+    
+    {% if st == 5 %}
+    <h1>Seat not Available</h1>
+    {% elif st == 4 %}
+    <h1>Seat Availdable</h1>
+    {% else %}
+    <h1>Seat Booked</h1>
+    {% endif %}
+
+
+</body>
+</html>

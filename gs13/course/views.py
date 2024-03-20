@@ -12,3 +12,14 @@ def learn_django(request):
 
 def float_format(request):
     return render(request, "course/courseone.html", context={"p1": 56.234, "p2": 56.0000, "p3": 56.34567})
+
+
+def django_tag(request):
+    return render(request, "course/coursetwo.html", {"nm": True})
+
+def example_two(request):
+    name = "Django"
+    seats = 4
+
+    course_details = {'nm':name, 'st':seats}
+    return render(request, "course/coursethree.html", context = course_details)
