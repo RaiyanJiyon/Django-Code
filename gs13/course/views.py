@@ -27,3 +27,16 @@ def example_two(request):
 def example_three(request):
     students = {'names': ["Sabbir", "Tamim", "Ishaq", "Mahabub", "Sohel"]}
     return render(request, "course/coursefour.html", context=students)
+
+def example_four(request):
+    stu = {'stu1': {"name": "Rahul", "roll": 103},
+           'stu2': {"name": "Sonam", "roll": 104},
+           'stu3': {"name": "Raj", "roll": 101},
+           'stu4': {"name": "Anu", "roll": 102},
+          }
+    students = {'students': stu}
+    return render(request, "course/coursefive.html", context=(students))
+
+def example_five(request):
+    data = {'name': 'Rahul', 'roll': 101}
+    return render(request, "course/coursesix.html", context={'data': data})

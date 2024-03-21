@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Course</title>
+    <title>Django Fees</title>
     <style>
         body {
             background-color: black;
@@ -12,8 +12,12 @@
     </style>
 </head>
 <body>
-    {% if nm %}
-    <h2>Hello Jiyon {{nm}} Developer</h2>
-    {% endif %}
+    {% for key, value in student.items %}
+    Student ID : {{key}} <br>
+    {% for k , v in value.items %}
+    {{k}} = {{v}} <br>
+    {% endfor %}
+    <br>
+    {% endfor %}
 </body>
 </html>

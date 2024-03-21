@@ -12,8 +12,10 @@
     </style>
 </head>
 <body>
-    {% if nm %}
-    <h2>Hello Jiyon {{nm}} Developer</h2>
-    {% endif %}
+    {% for key, value in data.items %}
+    {{ key }} = {{ value }} <br>
+    {% endfor %}
+    
+
 </body>
 </html>
