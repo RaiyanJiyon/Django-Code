@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+h1, h2 {
+    color: white;
+}
+
+
+
+img {
+    width: 200px;
+    height: 200px;
+}
