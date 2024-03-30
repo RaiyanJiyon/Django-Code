@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}{% endblock title %} </title>
+    <link rel="stylesheet" href="{% static "core/css/base.css" %}">
+</head>
+<body>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+
+            {% comment %} This approach is not good   {% endcomment %}
+            <li><a href="/about">About</a></li>
+            
+            {% comment %} This approach is good   {% endcomment %}
+            <li><a href="{% url "aboutus" %}">About</a></li>
+            
+            <li><a href="/cor/learndj">Course Details</a></li>
+            
+            {% comment %} We can define short name for our urls just like this    {% endcomment %}
+            {% url "courseone" as co %}
+
+            <li><a href="{{co}}">Course Details</a></li>
+        </ul>
+    </nav>
+
+    {% block content1 %}
+    <h1>Welcome to Django</h1>
+    {% endblock content1 %}
+</body>
+</html>
