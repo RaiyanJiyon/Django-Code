@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block pagetitle %}{% endblock pagetitle %}</title>
+</head>
+<body>
+    {% include "core/navbar.html" %}
+
+    {% block content1 %}
+    <h1>Welcome To Django</h1>
+    {% endblock content1 %}
+
+    <h2>Top Courses From Us - </h2>
+
+    {% include "core/topcourses.html" with p='PHP' only %}
+
+    {% include "core/navbar.html" %}
+</body>
+</html>
