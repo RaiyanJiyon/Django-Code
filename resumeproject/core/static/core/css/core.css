@@ -1,37 +1,43 @@
+/* Font style for specific class */
 .satisfy-regular {
   font-family: "Satisfy", cursive;
   /* font-weight: 400; */
   /* font-style: normal; */
 }
 
+/* Ensures HTML and body take up full height of the viewport */
 html, body {
     height: 100%;
 }
 
+/* Makes sure container fills entire height of viewport */
 .container-fluid {
     min-height: 100%;
 }
 
-/* Service icon color */
+/* Defines color for service icons */
 .i-color {
   color: chartreuse;
 }
 
-/* Service subtitle color */
+/* Defines color for service subtitles */
 .ss-color {
   color: silver;
 }
 
-/* nav-bar style */
+/* Styles for navigation links */
+/* Normal state */
 a.nav-link {
   color: whitesmoke;
 }
 
+/* Hover state */
 a.nav-link:hover {
   color: black;
   background-color: #e9cd79;
 }
 
+/* Active state */
 a.nav-link.active {
   color: black;
   background-color: #ffc107;
