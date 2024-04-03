@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        th, td {
+            border : 1px solid red;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Student Page</h1>
+    {% if stu %}
+    <h2>Show Data</h2>
+    <h3>{{stu}}</h3>
+
+    {% comment %} best way to see the data {% endcomment %}
+    <table>
+        <tr>
+            <th>Serial</th>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Student Email</th>
+            <th>Student Password</th>
+        </tr>
+
+        {% for st in stu %}
+        <tr>
+            <td>{{st.id}}</td>
+            <td>{{st.stuid}}</td>
+            <td>{{st.stuname}}</td>
+            <td>{{st.stuemail}}</td>
+            <td>{{st.stupass}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% comment %} for normal way to see the data  {% endcomment %}
+    {% for st in stu %}
+    {{st.id}}
+    {{st.stuid}}
+    {{st.stuname}}
+    {{st.stuemail}}
+    {{st.stupass}}
+
+
+
+    {% endfor %}
+    {% else %}
+    <h3>No Data</h3>
+    {% endif %}
+  </body>
+</html>
